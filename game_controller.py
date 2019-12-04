@@ -1,8 +1,13 @@
+from os import system
+
+from time import sleep
+
+from player import *
 class Game_controller :
 
     def __init__(self):
         self.round = round
-        player = Player()
+        self.player = Player()
         self.numbers_list = []
 
     def reload_game(self):
@@ -10,15 +15,18 @@ class Game_controller :
         pass
 
     def level_difficulty(self):
-        """"""
+        """fonctionnel"""
         print("choisir la difficulté facile, moyen ou difficile")
-        while not in ["facile", "moyen", "difficile"]:
+        self.difficulty = ""
+        while self.difficulty not in ["facile", "moyen", "difficile"]:
             self.difficulty=input("choisir la difficulté :")
         return self.difficulty
 
     def add_player_entry(self):
         """"""
-        pass
+        self.player_number = int(input("entrez votre nombre :"))
+        self.numbers_list.append(self.player_number)
+        return self.random_list
 
     def compare_value(self):
         """"""
@@ -26,4 +34,13 @@ class Game_controller :
 
     def display_random(self):
         """"""
-        pass
+
+    def clear(self):
+        """ """
+        # for windows
+        if name == 'nt':
+            _ = system('cls')
+
+        # for mac and linux(here, os.name is 'posix')
+        else:
+            _ = system('clear')
