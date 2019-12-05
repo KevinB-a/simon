@@ -13,3 +13,4 @@ game_controller.add_player_entry()
 for element in sequence.random_list :
     if element == game_controller.add_player_entry() :
         print("vous avez le bon nombre")
+    print("le nombre n'est pas le bon ")
