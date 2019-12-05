@@ -20,24 +20,23 @@ class Game_controller :
 
 
     def level_difficulty(self):
-        """method to choose difficulty (fonctionnel)"""
+        """method to choose difficulty """
         print("choisir la difficulté facile, moyen ou difficile")
         while self.difficulty not in ["facile", "moyen", "difficile"]:
             self.difficulty=input("choisir la difficulté :")
         return self.difficulty
 
     def add_player_entry(self):
-        """method to add the player number (fonctionnel)"""
-        self.player_number = int(input("entrez votre nombre :"))
-        #self.numbers_list.append(self.player_number)
+        """method to add the player number"""
+        return int(input("entrez votre nombre :"))
         self.clear()
-        return self.player_number
 
     def compare_value(self):
         """method to compare numbers_list and random_list"""
-        if self.numbers_list == self.sequence.random_list :
-            return True
-        return False
+        for element in self.sequence.random_list :
+            player_choice=self.add_player_entry()
+            if element != player_choice :
+                return False
 
     def display_random(self):
         """ method to display one by one every random number in the list"""
