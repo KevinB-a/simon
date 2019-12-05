@@ -6,6 +6,8 @@ from player import *
 
 from sequence import *
 
+import random
+
 class Game_controller :
 
     def __init__(self):
@@ -53,3 +55,25 @@ class Game_controller :
     def initialize_player(self):
         """method to initialize the name of the player"""
         self.player.enter_name()
+
+    def change_range(self):
+
+        if self.level_difficulty() =="facile":
+            self.number = random.randrange(0,11)
+
+        if self.level_difficulty() == "moyen" :
+            self.number = random.randrange(0,21)
+
+        if self.level_difficulty() == "difficile" :
+            self.number = random.randrange(0,101)
+
+    def change_time(self):
+
+        if self.level_difficulty() =="facile":
+            time.sleep(3)
+
+        if self.level_difficulty() == "moyen" :
+            time.sleep(2)
+
+        if self.level_difficulty() == "difficile" :
+            time.sleep(1)
