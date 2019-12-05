@@ -6,7 +6,7 @@ class Player :
         self.score = 0
 
     def enter_name(self):
-        """ """
+        """method to ask the user his name (fonctionnel) """
         self.name = input("enter your name :")
         return self.name
 
