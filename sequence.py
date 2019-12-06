@@ -4,7 +4,7 @@ import random
 class Sequence :
 
     def __init__(self):
-        """ """
+        """initialize arguments """
         self.random_list = []
         self.max_random = None
 

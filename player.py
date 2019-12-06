@@ -2,7 +2,7 @@ class Player :
     """this class is used for ask the user his name"""
 
     def __init__(self):
-        """ """
+        """initialize arguments """
         self.name = None
         self.score = 0
 

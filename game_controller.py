@@ -17,10 +17,6 @@ class Game_controller :
         self.sequence = Sequence()
         self.difficulty = None
 
-    def reload_game(self):
-        """method to ask the user if he wants to launch an another game"""
-
-
     def level_difficulty(self):
         """method to choose difficulty """
         while self.difficulty not in ["facile", "moyen", "difficile"]:
