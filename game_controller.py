@@ -29,7 +29,10 @@ class Game_controller :
 
     def add_player_entry(self):
         """method to add the player number"""
-        self.player_entry=int(input("entrez votre nombre :"))
+        try :
+            self.player_entry=int(input("entrez votre nombre :"))
+        except :
+            return -1    
         self.clear()
         return self.player_entry
 
@@ -38,6 +41,7 @@ class Game_controller :
         for element in self.sequence.random_list :
             player_choice=self.add_player_entry()
             if element != player_choice :
+                self.sequence.random_list = []
                 return False
 
     def display_random(self):

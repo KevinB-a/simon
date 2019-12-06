@@ -8,5 +8,6 @@ class Player :
 
     def enter_name(self):
         """method to ask the user his name  """
-        self.name = input("entrez votre nom :")
+        if self.name == None :
+            self.name = input("entrez votre nom :")
         return self.name
