@@ -10,7 +10,3 @@ class Player :
         """method to ask the user his name  """
         self.name = input("entrez votre nom :")
         return self.name
-
-    def play_sequence(self):
-        """ """
-        pass

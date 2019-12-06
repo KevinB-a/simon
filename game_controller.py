@@ -42,6 +42,7 @@ class Game_controller :
 
     def display_random(self):
         """ method to display one by one every random number in the list"""
+        self.change_range()
         self.sequence.add_random()
         for element in self.sequence.random_list:
             print(element)
@@ -60,13 +61,15 @@ class Game_controller :
         """method to change the range of the numbers """
 
         if self.level_difficulty() == "facile" :
-            self.number = random.randrange(0,11)
+            self.sequence.max_random = 11
 
         if self.level_difficulty() == "moyen" :
-            self.number = random.randrange(0,21)
+            self.sequence.max_random = 21
 
         if self.level_difficulty() == "difficile" :
-            self.number = random.randrange(0,101)
+            self.sequence.max_random = 101
+
+        return self.sequence.max_random
 
     def change_time(self):
         """methode to change display time """
