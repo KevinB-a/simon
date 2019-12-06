@@ -32,7 +32,7 @@ class Game_controller :
         try :
             self.player_entry=int(input("entrez votre nombre :"))
         except :
-            return -1    
+            return -1
         self.clear()
         return self.player_entry
 
@@ -40,7 +40,9 @@ class Game_controller :
         """method to compare numbers_list and random_list"""
         for element in self.sequence.random_list :
             player_choice=self.add_player_entry()
+            player_score = len(self.sequence.random_list)-1
             if element != player_choice :
+                print("your score is",player_score)
                 self.sequence.random_list = []
                 return False
 
