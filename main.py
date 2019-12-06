@@ -6,6 +6,7 @@ sequence = Sequence()
 game_controller= Game_controller()
 while continue_game == True :
     game_controller.initialize_player()
+    print("choisir la difficulté facile, moyen ou difficile")
     game_controller.level_difficulty()
     while continuee == True :
         game_controller.display_random()

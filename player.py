@@ -1,4 +1,5 @@
 class Player :
+    """this class is used for ask the user his name"""
 
     def __init__(self):
         """ """

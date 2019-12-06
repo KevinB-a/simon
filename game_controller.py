@@ -23,15 +23,15 @@ class Game_controller :
 
     def level_difficulty(self):
         """method to choose difficulty """
-        print("choisir la difficulté facile, moyen ou difficile")
         while self.difficulty not in ["facile", "moyen", "difficile"]:
             self.difficulty=input("choisir la difficulté :")
         return self.difficulty
 
     def add_player_entry(self):
         """method to add the player number"""
-        return int(input("entrez votre nombre :"))
+        self.player_entry=int(input("entrez votre nombre :"))
         self.clear()
+        return self.player_entry
 
     def compare_value(self):
         """method to compare numbers_list and random_list"""
@@ -45,7 +45,7 @@ class Game_controller :
         self.sequence.add_random()
         for element in self.sequence.random_list:
             print(element)
-            time.sleep(3)
+            self.change_time()
             self.clear()
 
     def clear(self):
@@ -57,8 +57,9 @@ class Game_controller :
         self.player.enter_name()
 
     def change_range(self):
+        """method to change the range of the numbers """
 
-        if self.level_difficulty() =="facile":
+        if self.level_difficulty() == "facile" :
             self.number = random.randrange(0,11)
 
         if self.level_difficulty() == "moyen" :
@@ -68,8 +69,8 @@ class Game_controller :
             self.number = random.randrange(0,101)
 
     def change_time(self):
-
-        if self.level_difficulty() =="facile":
+        """methode to change display time """
+        if self.level_difficulty() == "facile":
             time.sleep(3)
 
         if self.level_difficulty() == "moyen" :
