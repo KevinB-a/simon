@@ -2,8 +2,10 @@ from game_controller import *
 
 continue_game = True
 continuee = True
+
 sequence = Sequence()
 game_controller= Game_controller()
+
 while continue_game == True :
     game_controller.initialize_player()
     print("choisir la difficulté facile, moyen ou difficile")
