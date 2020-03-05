@@ -13,3 +13,5 @@ I learned how to make a class diagram, Declare and use objects in his program,
 Organize his program into objects, Make objects interact with each other,
 
 Manage the realization of a project in time
+
+this is my first project in oop python
